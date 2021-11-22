@@ -5,12 +5,17 @@
 
 	<h1>SI Unit Converter</h1>
 
+	<p>
+		SI (<i>Syst&eacuteme International</i>) units are a set of units based on the metric system that provides a consistent international standard for measurements. In general, they are defined according to physical constants.
+	</p>
+
 	<h3>Mass</h3>
 	<label for="inputMassValue">Input:</label>
 	<input type="text" id="inputMassValue" value=0>
 	<select id="selectMassUnit">
 		<option value=0.45359>pounds</option>
 		<option value=6.35029>stone</option>
+		<option value=0.001>gram</option>
 	</select>
 	<br><br>
 	<label for="outputMassValue">Output:</label>
@@ -33,7 +38,19 @@
 	<input type="button" value="Calculate" id="buttonCalculateLength"></input>
 	<br><br>
 
-
+	<h3>Time</h3>
+	<label for="inputTimeValue">Input:</label>
+	<input type="text" id="inputTimeValue" value=0>
+	<select id="selectTimeUnit">
+		<option value=60>minutes</option>
+		<option value=3600>hours</option>
+	</select>
+	<br><br>
+	<label for="outputTimeValue">Output:</label>
+	<input type="text" id="outputTimeValue" value=0> s</input>
+	<br><br>
+	<input type="button" value="Calculate" id="buttonCalculateTime"></input>
+	<br><br>
 
 	<a href="../main.html">back</a>
 	<script src="../js/unit-converter.js"></script>

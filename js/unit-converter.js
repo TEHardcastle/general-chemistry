@@ -2,6 +2,7 @@
 
 document.getElementById("buttonCalculateMass").onclick = calculateMass;
 document.getElementById("buttonCalculateLength").onclick = calculateLength;
+document.getElementById("buttonCalculateTime").onclick = calculateTime;
 
 function calculateMass(){
     let inputMass = document.getElementById("inputMassValue").value;
@@ -10,7 +11,7 @@ function calculateMass(){
     if (!isNaN(inputMass)) {
         outputMass = inputMass*inputMassUnit;
     }
-    document.getElementById("outputMassValue").value = outputMass.toFixed(5);
+    document.getElementById("outputMassValue").value = outputMass.toPrecision(5);
 }
 
 function calculateLength(){
@@ -20,5 +21,15 @@ function calculateLength(){
     if (!isNaN(inputLength)) {
         outputLength = inputLength*inputLengthUnit;
     }
-    document.getElementById("outputLengthValue").value = outputLength;
+    document.getElementById("outputLengthValue").value = outputLength.toPrecision(5);
+}
+
+function calculateTime(){
+    let inputTime = document.getElementById("inputTimeValue").value;
+    let inputTimeUnit = document.getElementById("selectTimeUnit").value;
+    let outputTime = 0;
+    if (!isNaN(inputTime)) {
+        outputTime = inputTime*inputTimeUnit;
+    }
+    document.getElementById("outputTimeValue").value = outputTime.toPrecision(5);
 }
