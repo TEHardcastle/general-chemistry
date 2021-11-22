@@ -3,6 +3,8 @@
 document.getElementById("buttonCalculateMass").onclick = calculateMass;
 document.getElementById("buttonCalculateLength").onclick = calculateLength;
 document.getElementById("buttonCalculateTime").onclick = calculateTime;
+document.getElementById("buttonCalculateTemperature").onclick = calculateTemperature;
+
 
 function calculateMass(){
     let inputMass = document.getElementById("inputMassValue").value;
@@ -32,4 +34,18 @@ function calculateTime(){
         outputTime = inputTime*inputTimeUnit;
     }
     document.getElementById("outputTimeValue").value = outputTime.toPrecision(5);
+}
+
+function calculateTemperature(){
+    let inputTemperature = document.getElementById("inputTemperatureValue").value;
+    let inputTemperatureUnit = document.getElementById("selectTemperatureUnit").value;
+    let outputTemperature = 0;
+    if (!isNaN(inputTemperature)) {
+        if (inputTemperatureUnit == "C") {
+            outputTemperature = parseFloat(inputTemperature) + 273.15;
+        } else if (inputTemperatureUnit == "F") {
+            outputTemperature = (parseFloat(inputTemperature) - 32) * (5/9) + 273.15;
+        }
+    }
+    document.getElementById("outputTemperatureValue").value = outputTemperature.toPrecision(5);
 }
