@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+	<h1>Phase Checker</h1>
+
+	<p>
+		This will take a temperture and pressure and return the phase of a substance selected from a list.
+	</p>
+
+    <!-- Draw phase diagram -->
+    <!--<canvas id="myCanvas" width="500" height="500"></canvas>-->
+    <svg width="500" height="500">
+        <rect   x = "45"      y = "5"
+                width = "450" height = "450"
+                style="
+                fill            :   white;
+                stroke          :   black;
+                stroke-width    :   4;
+                fill-opacity    :   0.1;
+                stroke-opacity  :   0.9;
+                "/>
+        <line   x1 = "45"   y1 = "455"
+                x2 = "250" y2 = "250"
+                style="
+                stroke          :   black;
+                stroke-width    :   2
+                "/>
+        <line   x1 = "250" y1 = "250"
+                x2 = "360" y2 = "5"
+                style="
+                stroke          :   black;
+                stroke-width    :   2
+                "/>
+        <line   x1 = "250" y1 = "250"
+                x2 = "495" y2 = "170"
+                style="
+                stroke          :   black;
+                stroke-width    :   2
+                "/>
+    </svg>
+
+    <h4>Triple Point</h4>
+    <label for="triplePointPressure">Pressure:</label>
+    <input type="text" id="inputTriplePointPressure" value=0.75>
+    <br>
+    <label for="triplePointTemp">Temperature:</label>
+    <input type="text" id="inputTriplePointTemp" value=30><br>
+    <input type="button" value="Draw" id="buttonDrawDiagram"></input>
+
+
+	<h3>Thing</h3>
+	<label for="inputTemperature">Temperature:</label>
+	<input type="text" id="inputMassValue" value=0>
+    <label for="inputPressure">Pressure:</label>
+    <input type="text" id="inputPressureValue" value=0>
+	<br><br>
+	<input type="button" value="Check" id="buttonCheckPhase"></input>
+	<br><br>
+
+	<a href="../main.html">back</a>
+	<script src="../js/phase-diagram.js"></script>
+</body>
+
+</html>
