@@ -3,10 +3,10 @@
 
 <body>
 
-	<h1>Phase Checker</h1>
+	<h1>Phase Diagrams & Triple Points</h1>
 
 	<p>
-		This will take a temperture and pressure and return the phase of a substance selected from a list.
+		This page displays a phase diagram, and allows the triple point to be modified using the text input boxes below. The freezing pressure at 100 degrees, and the boiling point at 2 atmospheres are kept constant. Real phase diagrams are much more complex than this - often including additional phases, such as polymorphs and supercritical fluids.
 	</p>
 
     <!-- Draw phase diagram -->
@@ -21,24 +21,44 @@
                 fill-opacity    :   0.1;
                 stroke-opacity  :   0.9;
                 "/>
-        <line   x1 = "45"   y1 = "455"
+        <line   id = "lineSection1"
+                x1 = "45"   y1 = "455"
                 x2 = "250" y2 = "250"
                 style="
                 stroke          :   black;
                 stroke-width    :   2
                 "/>
-        <line   x1 = "250" y1 = "250"
+        <line   id = "lineSection2"
+                x1 = "250" y1 = "250"
                 x2 = "360" y2 = "5"
                 style="
                 stroke          :   black;
                 stroke-width    :   2
                 "/>
-        <line   x1 = "250" y1 = "250"
+        <line   id = "lineSection3"
+                x1 = "250" y1 = "250"
                 x2 = "495" y2 = "170"
                 style="
                 stroke          :   black;
                 stroke-width    :   2
                 "/>
+        <text x = "190" y = "-10" transform = "rotate(90)"> Pressure </text>
+        <text x = "200" y = "495"> Temperature </text>
+        <text x = "360" y = "450"> Solid </text>
+        <text x = "440" y =  "30"> Gas </text>
+        <text x =  "70" y =  "30"> Liquid </text>
+
+        <text font-size = 10px x =  "40.0" y = "470">  0.0 </text>
+        <text font-size = 10px x = "147.5" y = "470"> 25.0 </text>
+        <text font-size = 10px x = "255.0" y = "470"> 50.0 </text>
+        <text font-size = 10px x = "362.5" y = "470"> 75.0 </text>
+        <text font-size = 10px x = "470.0" y = "470">100.0 </text>
+
+        <text font-size = 10px x = "25" y = "455.00">  0.0 </text>
+        <text font-size = 10px x = "25" y = "343.75">  0.5 </text>
+        <text font-size = 10px x = "25" y = "232.50">  1.0 </text>
+        <text font-size = 10px x = "25" y = "121.25">  1.5 </text>
+        <text font-size = 10px x = "25" y =  "10.00">  2.0 </text>
     </svg>
 
     <h4>Triple Point</h4>
@@ -49,18 +69,8 @@
     <input type="text" id="inputTriplePointTemp" value=30><br>
     <input type="button" value="Draw" id="buttonDrawDiagram"></input>
 
-
-	<h3>Thing</h3>
-	<label for="inputTemperature">Temperature:</label>
-	<input type="text" id="inputMassValue" value=0>
-    <label for="inputPressure">Pressure:</label>
-    <input type="text" id="inputPressureValue" value=0>
-	<br><br>
-	<input type="button" value="Check" id="buttonCheckPhase"></input>
-	<br><br>
-
 	<a href="../main.html">back</a>
-	<script src="../js/phase-diagram.js"></script>
+	<script src="../js/phase-checker.js"></script>
 </body>
 
 </html>
